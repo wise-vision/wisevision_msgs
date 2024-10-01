@@ -1,3 +1,5 @@
+# Not supported by MicroPublisher (outdated)
+
 # Id of the sensor
 uint64 id
 
