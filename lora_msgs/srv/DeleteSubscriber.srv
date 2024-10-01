@@ -1,0 +1,5 @@
+# Name of the topic that should be deleted
+string topic_name_to_delete
+---
+# Connection status (true if the sensor or component is connected, false otherwise)
+bool connection

@@ -1,0 +1,5 @@
+# AvailableTopics.srv
+
+---
+string[] available_topics      # An array of topic names that are currently available for monitoring.
+                               # Example: ["/sensor_data", "/camera_feed", "/status_updates"]

@@ -1,0 +1,20 @@
+uint8  MESSAGE_TYPE_ADD_SENSOR_RESPONSE = 0x00
+uint8  MESSAGE_TYPE_DELETE_SENSOR_RESPONSE = 0x01
+uint8  MESSAGE_TYPE_CHANGE_SENSOR_RESPONSE = 0x02
+uint8  MESSAGE_TYPE_WELCOME_MESSAGE = 0x04
+uint8  MESSAGE_TYPE_MICROPUBLISHER = 0x05
+uint8  MESSAGE_TYPE_ADD_SUBSCRIBER_RESPONSE = 0x06
+uint8  MESSAGE_TYPE_DELETE_SUBSCRIBER_RESPONSE = 0x07
+uint8  MESSAGE_TYPE_SUBSCRIBED_TOPIC_MESSAGE = 0x08
+uint8  MESSAGE_TYPE_ADD_SUBSCRIBER_ACTION_RESPONSE = 0x09
+uint8 message_type
+
+AddSensorResponse add_sensor_response_uplink
+DeleteSensorResponse delete_sensor_response_uplink
+ChangeSensorResponse change_sensor_response_uplink
+# Welcome message is only a two bytes message {0x04, 0x00}
+MicroPublisher micro_publisher_uplink
+SubscribedTopic subscribed_topic_uplink
+AddSubscriberResponse add_subscriber_response_uplink
+DeleteSubscriberResponse delete_subscriber_responsee_uplink
+AddSubscriberActionResponse add_subscriber_action_response_uplink

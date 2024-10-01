@@ -1,0 +1,11 @@
+# Unique identifier for a sensor or component
+int64 id
+
+# Name of the sensor or component
+string name
+
+# Frequency of sensor updates or data transmission in Hz
+int64 frequency
+---
+# Status of the sensor or component (true if active, false otherwise)
+bool status

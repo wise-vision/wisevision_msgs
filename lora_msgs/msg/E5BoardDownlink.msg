@@ -1,0 +1,14 @@
+uint8  MESSAGE_TYPE_ADD_SENSOR_REQUEST = 0x00
+uint8  MESSAGE_TYPE_DELETE_SENSOR_REQUEST = 0x01
+uint8  MESSAGE_TYPE_CHANGE_SENSOR_REQUEST = 0x02
+uint8  MESSAGE_TYPE_ADD_SUBSCRIBER_REQUEST = 0x06
+uint8  MESSAGE_TYPE_DELETE_SUBSCRIBER_REQUEST = 0x07
+uint8  MESSAGE_TYPE_ADD_SUBSCRIBER_ACTION_REQUEST = 0x09
+uint8 message_type
+
+AddSensorRequest add_sensor_request_downlink
+DeleteSensorRequest delete_sensor_request_downlink
+ChangeSensorRequest change_sensor_request_downlink
+AddSubscriberRequest add_subscriber_request_downlink
+DeleteSubscriberRequest delete_subscriber_request_downlink
+AddSubscriberActionRequest add_subscriber_action_request_downlink

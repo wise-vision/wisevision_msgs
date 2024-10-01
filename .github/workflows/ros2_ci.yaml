@@ -1,0 +1,41 @@
+name: Build and run ROS2 tests
+
+on:
+  pull_request:
+    branches: [ dev ]
+  schedule:
+    - cron: '0 22 * * *'
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-22.04, ubuntu-24.04]
+
+    runs-on: ${{ matrix.os }}
+
+    continue-on-error: true
+
+    container:
+      image: ros:humble-ros-base
+
+    steps:
+    - name: Create workspace directory
+      run: |
+        mkdir -p wisevision_msgs_ws/src
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        path: wisevision_msgs/src
+
+    - name: Install dependencies
+      run: |
+            apt-get update
+            rosdep update
+            cd wisevision_msgs_ws
+            rosdep install --from-paths src -i -y --rosdistro humble
+    
+    - name: Build test
+      run: |
+            . /opt/ros/humble/setup.sh
+            colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release

@@ -1,0 +1,27 @@
+# The name of the topic from which messages will be retrieved
+string topic_name
+
+# The type of message to retrieve (e.g., "std_msgs/Int32", "lora_msgs/SensorValue")
+string message_type
+
+# The start time of the range for retrieving messages
+lora_msgs/FullDateTime time_start
+
+# The end time of the range for retrieving messages
+lora_msgs/FullDateTime time_end
+
+# The maximum number of messages to retrieve; if set to 0, retrieve all messages within the time range
+uint32 number_of_msgs
+
+---
+# Array of Int32 messages retrieved from the specified topic
+int32[] int32_msgs
+
+# Array of SensorValue messages retrieved from the specified topic
+lora_msgs/MicroPublisher[] micro_publisher_data
+
+# serialized data
+uint8[] data
+
+# Array of timestamps corresponding to each retrieved message
+lora_msgs/FullDateTime[] timestamps
