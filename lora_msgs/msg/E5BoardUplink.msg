@@ -7,6 +7,7 @@ uint8  MESSAGE_TYPE_ADD_SUBSCRIBER_RESPONSE = 0x06
 uint8  MESSAGE_TYPE_DELETE_SUBSCRIBER_RESPONSE = 0x07
 uint8  MESSAGE_TYPE_SUBSCRIBED_TOPIC_MESSAGE = 0x08
 uint8  MESSAGE_TYPE_ADD_SUBSCRIBER_ACTION_RESPONSE = 0x09
+uint8  MESSAGE_TYPE_MICROPUBLISHER_EXTENDED = 0x0A
 uint8 message_type
 
 AddSensorResponse add_sensor_response_uplink
@@ -18,3 +19,4 @@ SubscribedTopic subscribed_topic_uplink
 AddSubscriberResponse add_subscriber_response_uplink
 DeleteSubscriberResponse delete_subscriber_responsee_uplink
 AddSubscriberActionResponse add_subscriber_action_response_uplink
+MicroPublisherExtended micro_publisher_extended_uplink
