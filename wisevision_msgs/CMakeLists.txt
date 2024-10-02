@@ -6,5 +6,18 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(lora_msgs REQUIRED)
+
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  # Services
+  "srv/AddGpsDevice.srv"
+  "srv/DeleteGpsDevice.srv"
+  "srv/ModifyGpsDevice.srv"
+  DEPENDENCIES builtin_interfaces lora_msgs sensor_msgs
+)
+
 
 ament_package()
