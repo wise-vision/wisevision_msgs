@@ -16,6 +16,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/AddGpsDevice.srv"
   "srv/DeleteGpsDevice.srv"
   "srv/ModifyGpsDevice.srv"
+  "srv/AddDataToDataBase.srv"
+  "srv/CreateDataBase.srv"
   DEPENDENCIES builtin_interfaces lora_msgs sensor_msgs
 )
 

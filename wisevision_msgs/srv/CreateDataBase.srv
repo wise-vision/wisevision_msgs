@@ -1,0 +1,19 @@
+# CreateDataBase.srv
+
+# The key expression, e.g., "demo/example/**"
+string key_expr
+
+# The volume ID, e.g., "influxdb"
+string volume_id
+
+# The name of the database, e.g., "zenoh_example"
+string db_name   
+
+# Whether to create the database if it doesn't exist
+bool create_db    
+---
+# Indicates if the operation was successful
+bool success
+
+# Response or message containing the result of the operation
+string message    
