@@ -19,6 +19,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/AddDataToDataBase.srv"
   "srv/CreateDataBase.srv"
   "srv/DeleteDataFromDataBase.srv"
+  "srv/AddStorageToDataBase.srv"
   DEPENDENCIES builtin_interfaces lora_msgs sensor_msgs
 )
 
