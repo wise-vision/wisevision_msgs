@@ -9,6 +9,9 @@ lora_msgs/EUI64 device_eui
 
 # The GPS coordinates and related data (latitude, longitude, altitude, etc.) from the sensor_msgs/NavSatFix message
 sensor_msgs/NavSatFix nav_value
+
+# True if device change localization False if not
+bool is_moving
 ---
 # Response:
 # Indicates whether the device was successfully added (true for success, false for failure)
