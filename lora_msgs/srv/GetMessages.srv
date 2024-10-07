@@ -20,6 +20,9 @@ int32[] int32_msgs
 # Array of SensorValue messages retrieved from the specified topic
 lora_msgs/MicroPublisher[] micro_publisher_data
 
+# Arry with gps devices data
+lora_msgs/GpsDeviceData[] gps_devices_data
+
 # serialized data
 uint8[] data
 

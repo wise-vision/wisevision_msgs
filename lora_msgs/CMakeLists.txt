@@ -42,6 +42,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
     "msg/SubscribedTopic.msg"
     "msg/E5BoardUplink.msg"
     "msg/E5BoardDownlink.msg"
+    "msg/GpsDeviceData.msg"
     # Services
     "srv/GetMessages.srv"
     "srv/AutomaticAction.srv"

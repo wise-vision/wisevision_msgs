@@ -13,7 +13,6 @@ find_package(lora_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   # Messages
-  "msg/GpsDeviceData.msg"
   "msg/GpsDevicesPublisher.msg"
   # Services
   "srv/AddGpsDevice.srv"
