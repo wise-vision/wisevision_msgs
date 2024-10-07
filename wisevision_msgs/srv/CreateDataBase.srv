@@ -3,8 +3,8 @@
 # The key expression, e.g., "demo/example/**"
 string key_expr
 
-# The volume ID, e.g., "influxdb"
-string volume_id
+# The storage_name, e.g., "influxdb"
+string storage_name
 
 # The name of the database, e.g., "zenoh_example"
 string db_name   
