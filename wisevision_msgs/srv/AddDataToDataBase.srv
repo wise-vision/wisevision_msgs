@@ -1,0 +1,12 @@
+# AddDataToDataBase.srv
+
+# Path to the database, e.g., /demo/example/test/id
+string db_path
+
+# Enter data in the format key=value&key2=value2
+string query   
+---
+# Indicates if the operation was successful
+bool success
+# Response or message containing the result of the operation
+string message

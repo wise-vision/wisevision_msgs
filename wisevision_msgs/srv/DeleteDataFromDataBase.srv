@@ -1,0 +1,9 @@
+# DeleteDataFromDataBase.srv
+
+# Path to the database, e.g., /demo/example/test/id
+string db_path
+---
+# Indicates if the operation was successful
+bool success
+# Response or message containing the result of the operation
+string message
