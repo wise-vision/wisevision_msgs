@@ -30,7 +30,7 @@ uint8[] data
 lora_msgs/FullDateTime[] timestamps
 
 # Informs about the successful download of the message
-bool sucess
+bool success
 
 # Error message
 string error_message
