@@ -28,3 +28,9 @@ uint8[] data
 
 # Array of timestamps corresponding to each retrieved message
 lora_msgs/FullDateTime[] timestamps
+
+# Informs about the successful download of the message
+bool sucess
+
+# Error message
+string error_message
