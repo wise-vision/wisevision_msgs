@@ -1,4 +1,4 @@
-# AutomaticActionConnection.srv
+# AutomaticActionCombinedRequestAndTime.msg
 
 string[] listen_topics        # An array of topic names that will be monitored. 
                               # Example: ["/topic1", "/topic2", "/topic3"]
@@ -23,5 +23,4 @@ uint8 EMAIL_WEB_PUSH            = 4  # Sending notification via email and web pu
 uint8 PUSH_WEB_PUSH             = 5  # Sending notification via push notification and web push notification
 uint8 EMAIL_PUSH_WEB_PUSH       = 6  # Sending notification via email, push notification, and web push notification
 
----
-bool success                  # The result of the service execution: true if the operation was successful, false otherwise.
+lora_msgs/FullDateTime date_and_time
