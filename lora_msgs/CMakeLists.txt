@@ -59,6 +59,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
     "srv/DeleteSubscriber.srv"
     "srv/AddSubscriberAction.srv"
     "srv/AvailableTopicsCombined.srv"
+    "srv/ChangeAutomaticAction.srv"
+    "srv/ChangeAutomaticActionCombined.srv"
 
     DEPENDENCIES builtin_interfaces sensor_msgs
 )
