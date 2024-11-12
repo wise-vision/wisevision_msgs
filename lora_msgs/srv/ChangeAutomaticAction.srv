@@ -1,4 +1,7 @@
-# AutomaticAction.srv
+# ChangeAutomaticAction.srv
+
+string action_and_publisher_name_to_change   # The name of the topic to change
+                               # Example: "/triggered_action"
 
 string listen_topic            # The name of the topic that will be monitored.
                                # Example: "/sensor_data"
@@ -15,7 +18,7 @@ string trigger_val             # The threshold value against which the field is 
 string trigger_type            # The type of comparison to be used. Possible values: "LessThan", "GreaterThan", "EqualTo".
                                # Example: "LessThan"
    
-string action_and_publisher_name   # The name of the topic where the message will be published if the trigger condition is met.
+string new_action_and_publisher_name   # The name of the topic where the message will be published if the trigger condition is met.
                                # Example: "/triggered_action"
    
 string pub_message_type        # The type of ROS message that will be published on the pub_topic. Not in use

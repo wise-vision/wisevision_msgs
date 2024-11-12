@@ -1,4 +1,7 @@
-# AutomaticActionConnection.srv
+# ChangeAutomaticActionCombined.srv
+
+string action_and_publisher_name_to_change   # The name of the topic to change
+                               # Example: "/triggered_action"
 
 string[] listen_topics        # An array of topic names that will be monitored. 
                               # Example: ["/topic1", "/topic2", "/topic3"]
@@ -6,7 +9,7 @@ string[] listen_topics        # An array of topic names that will be monitored.
 string logic_expression       # A logical expression that combines the states of the monitored topics. 
                               # Example: "/topic1 and /topic2 or /topic3"
 
-string action_and_publisher_name # The name of the topic where a message will be published if the logic expression evaluates to true.
+string new_action_and_publisher_name # The name of the topic where a message will be published if the logic expression evaluates to true.
                               # Example: "/combined_action"
                               
 string trigger_text            # The text content that will be published to the pub_topic.

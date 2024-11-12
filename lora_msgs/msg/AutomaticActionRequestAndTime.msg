@@ -1,4 +1,4 @@
-# AutomaticAction.srv
+# AutomaticActionRequestAndTime.msg
 
 string listen_topic            # The name of the topic that will be monitored.
                                # Example: "/sensor_data"
@@ -15,7 +15,7 @@ string trigger_val             # The threshold value against which the field is 
 string trigger_type            # The type of comparison to be used. Possible values: "LessThan", "GreaterThan", "EqualTo".
                                # Example: "LessThan"
    
-string action_and_publisher_name   # The name of the topic where the message will be published if the trigger condition is met.
+string action_and_publisher_name  # The name of the topic where the message will be published if the trigger condition is met.
                                # Example: "/triggered_action"
    
 string pub_message_type        # The type of ROS message that will be published on the pub_topic. Not in use
@@ -37,7 +37,5 @@ uint8 EMAIL_PUSH                = 3  # Sending notification via email and push n
 uint8 EMAIL_WEB_PUSH            = 4  # Sending notification via email and web push notification
 uint8 PUSH_WEB_PUSH             = 5  # Sending notification via push notification and web push notification
 uint8 EMAIL_PUSH_WEB_PUSH       = 6  # Sending notification via email, push notification, and web push notification
----
-bool success                   # The result of the service execution: true if successful, false otherwise.
 
-string error_message           # Message with error communicate
+lora_msgs/FullDateTime date_and_time

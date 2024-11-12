@@ -43,6 +43,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
     "msg/E5BoardUplink.msg"
     "msg/E5BoardDownlink.msg"
     "msg/GpsDeviceData.msg"
+    "msg/AutomaticActionRequestAndTime.msg"
+    "msg/AutomaticActionCombinedRequestAndTime.msg"
     # Services
     "srv/GetMessages.srv"
     "srv/AutomaticAction.srv"
@@ -56,6 +58,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
     "srv/AddSubscriber.srv"
     "srv/DeleteSubscriber.srv"
     "srv/AddSubscriberAction.srv"
+    "srv/AvailableTopicsCombined.srv"
+    "srv/ChangeAutomaticAction.srv"
+    "srv/ChangeAutomaticActionCombined.srv"
 
     DEPENDENCIES builtin_interfaces sensor_msgs
 )
