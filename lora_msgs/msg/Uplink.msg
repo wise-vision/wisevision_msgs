@@ -1,3 +1,5 @@
+# Uplink.msg
+
 # UTC time of pkt RX, us precision, ISO 8601 'compact' format is provided
 bool is_defined_time
 

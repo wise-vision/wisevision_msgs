@@ -1,3 +1,5 @@
+# GetMessages.srv
+
 # The name of the topic from which messages will be retrieved
 string topic_name
 

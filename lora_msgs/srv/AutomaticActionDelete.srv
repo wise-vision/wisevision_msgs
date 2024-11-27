@@ -1,8 +1,13 @@
 # AutomaticActionDelete.srv
 
-string listen_topic_to_delete  # The name of the topic that is to be removed from monitoring.
-                               # Example: "/sensor_data"
+# The name of the topic that is to be removed from monitoring.
+# Example: "/sensor_data"
+string listen_topic_to_delete
 ---
-bool success                   # The result of the service execution: true if the deletion was successful, false otherwise.
+# The result of the service execution: true if the deletion was successful, false otherwise.
+# Example: "true"
+bool success
 
-string error_message           # Message with error communicate
+# Message with error communicate.
+# Example: "No such topic found."
+string error_message
