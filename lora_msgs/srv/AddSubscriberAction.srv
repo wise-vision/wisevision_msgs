@@ -1,14 +1,24 @@
-# Name of the input topic the sensor subscribes to
+# AddSubscriberAction.srv
+
+# Name of the input topic the sensor subscribes to.
+# Example: "/sensor/input"
 string topic_name_in
 
-# Name of the callback function triggered when a message is received
+# Name of the callback function triggered when a message is received.
+# Example: "process_sensor_data"
 string callback_function
 
-# Library or package where the message type is defined
+# Library or package where the message type is defined.
+# Example: "std_msgs"
 string msg_library
 
-# Type of message being used (e.g., String, Int32, CustomType)
+# Type of message being used (e.g., String, Int32, CustomType).
+# Example: "String"
 string msg_type
+
+# Quality of Service settings for the topic communication.
+# Example: "Reliable"
+Qos qos
 
 # Quality of Service type for "best effort" communication
 uint8 QOS_TYPE_BEST_EFFORT = 0
@@ -37,8 +47,10 @@ uint8 QOS_TYPE_LIVELINESS = 7
 # Selected Quality of Service type
 uint8 qos_type
 ---
-# Name of the topic to be created
+# Name of the topic to be created.
+# Example: "/sensor/output"
 string topic_name_create
 
-# Connection status (true if the sensor or component is connected, false otherwise)
+# Connection status (true if the sensor or component is connected, false otherwise).
+# Example: "true"
 bool connection
