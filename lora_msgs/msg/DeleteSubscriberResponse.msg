@@ -1,2 +1,5 @@
-# True if deleted, false if not
-bool connection
+# DeleteSubscriberResponse.msg
+
+# True if deleted, false if not.
+# Example: "true"
+bool connection        

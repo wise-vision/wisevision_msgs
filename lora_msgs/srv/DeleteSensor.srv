@@ -1,8 +1,13 @@
-# Unique identifier for a sensor or component
+# DeleteSensor.srv
+
+# Unique identifier for a sensor or component.
+# Example: "123456789"
 int64 id
 ---
-# Unique identifier for a sensor or component
+# Unique identifier for a sensor or component.
+# Example: "123456789"
 int64 id
 
-# Status of the sensor or component (true if active, false otherwise)
+# Status of the sensor or component (true if active, false otherwise).
+# Example: "true"
 bool status

@@ -1,11 +1,17 @@
-# Unique identifier for a sensor or component
+# ChangeSetup.srv
+
+# Unique identifier for a sensor or component.
+# Example: "123456789"
 int64 id
 
-# Name of the sensor or component
+# Name of the sensor or component.
+# Example: "Temperature Sensor"
 string name
 
-# Frequency of sensor updates or data transmission in Hz
+# Frequency of sensor updates or data transmission in Hz.
+# Example: "10"
 int64 frequency
 ---
-# Status of the sensor or component (true if active, false otherwise)
+# Status of the sensor or component (true if active, false otherwise).
+# Example: "true"
 bool status
