@@ -1,0 +1,19 @@
+# ModifyGpsDevice.srv
+
+# Request:
+
+# The EUI64 identifier of the device from the lora_msgs package
+lora_msgs/EUI64 device_eui
+
+# The name of the device being added
+string device_name
+
+# The GPS coordinates and related data (latitude, longitude, altitude, etc.) from the sensor_msgs/NavSatFix message
+sensor_msgs/NavSatFix nav_value
+---
+# Response:
+# Indicates whether the device was successfully added (true for success, false for failure)
+bool success
+
+# Error message in case of failure, providing details about what went wrong
+string error

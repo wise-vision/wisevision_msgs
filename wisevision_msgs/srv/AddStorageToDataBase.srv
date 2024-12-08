@@ -1,0 +1,10 @@
+# AddStorageToDataBase.srv
+
+# The name of the storage (e.g., "influxdb")
+string storage_name
+---
+# Indicates if the operation was successful
+bool success
+
+# Response or message containing the result of the operation
+string message

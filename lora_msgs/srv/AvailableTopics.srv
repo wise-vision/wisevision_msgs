@@ -1,0 +1,6 @@
+# AvailableTopics.srv
+
+---
+# List of available topics with their parameters and time.
+# Example: "[{listen_topic: '/sensor_data', listen_message_type: 'std_msgs/String', value: 'data', trigger_val: '100.0', trigger_type: 'LessThan', action_and_publisher_name: '/triggered_action', pub_message_type: 'std_msgs/String', trigger_text: 'Action triggered!', data_validity_ms: 1000, publication_method: 0, date_and_time: {year: 2023, month: 10, day: 1, hour: 12, minute: 0, second: 0, nanosecond: 0}}]"
+lora_msgs/AutomaticActionRequestAndTime[] available_topics_with_parameters_and_time

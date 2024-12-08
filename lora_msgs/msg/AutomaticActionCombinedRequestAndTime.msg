@@ -1,0 +1,46 @@
+# AutomaticActionCombinedRequestAndTime.msg
+
+# An array of topic names that will be monitored.
+# Example: ["/topic1", "/topic2", "/topic3"]
+string[] listen_topics
+
+# A logical expression that combines the states of the monitored topics.
+# Example: "/topic1 and /topic2 or /topic3"
+string logic_expression
+
+# The name of the topic where a message will be published if the logic expression evaluates to true.
+# Example: "/combined_action"
+string action_and_publisher_name
+
+# The text content that will be published to the pub_topic.
+# Example: "Action triggered!"
+string trigger_text
+
+# The method of notification delivery: 0 - EMAIL, 1 - PUSH_NOTIFICATION, etc.
+# Example: "0"
+uint8 publication_method
+
+# Enum for publication_method (delivery method)
+# Sending notification via email
+uint8 EMAIL = 0
+
+# Sending notification via push notification
+uint8 PUSH_NOTIFICATION = 1
+
+# Sending notification via web push notification (browser-based)
+uint8 WEB_PUSH_NOTIFICATION = 2
+
+# Sending notification via email and push notification
+uint8 EMAIL_PUSH = 3
+
+# Sending notification via email and web push notification
+uint8 EMAIL_WEB_PUSH = 4
+
+# Sending notification via push notification and web push notification
+uint8 PUSH_WEB_PUSH = 5
+
+# Sending notification via email, push notification, and web push notification
+uint8 EMAIL_PUSH_WEB_PUSH = 6
+
+# Date and time information
+lora_msgs/FullDateTime date_and_time

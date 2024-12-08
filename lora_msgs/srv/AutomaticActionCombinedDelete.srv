@@ -1,0 +1,13 @@
+# AutomaticActionCombinedDelete.srv
+
+# The name of the combined topics publisher that is to be deleted.
+# Example: "combined_publisher_1"
+string name_of_combined_topics_publisher
+---
+# The result of the service execution: true if the deletion was successful, false otherwise.
+# Example: "true"
+bool success
+
+# Message with error communicate.
+# Example: "No such publisher found."
+string error_message

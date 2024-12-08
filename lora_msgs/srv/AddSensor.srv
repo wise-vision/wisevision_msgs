@@ -1,0 +1,25 @@
+# AddSensor.srv
+
+# Unique identifier for a sensor or component.
+# Example: "123456789"
+int64 id
+
+# Name of the sensor or component.
+# Example: "Temperature Sensor"
+string name
+
+# Quality of Service settings for the topic communication.
+# Example: "Reliable"
+string qos
+
+# Frequency of sensor updates or data transmission in Hz.
+# Example: "10"
+int64 frequency
+---
+# Unique identifier for a sensor or component.
+# Example: "123456789"
+int64 id
+
+# Connection status (true if the sensor or component is connected, false otherwise).
+# Example: "true"
+bool connection

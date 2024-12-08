@@ -1,0 +1,6 @@
+# AvailableTopicsCombined.srv
+
+---
+# List of available combined topics with their parameters and time.
+# Example: "[{listen_topics: ['/topic1', '/topic2', '/topic3'], logic_expression: '/topic1 and /topic2 or /topic3', action_and_publisher_name: '/combined_action', trigger_text: 'Action triggered!', publication_method: 0, date_and_time: {year: 2023, month: 10, day: 1, hour: 12, minute: 0, second: 0, nanosecond: 0}}]"
+lora_msgs/AutomaticActionCombinedRequestAndTime[] available_combined_topics_with_parameters_and_time
