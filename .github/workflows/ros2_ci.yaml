@@ -25,7 +25,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with:
-        path: wisevision_msgs/src
+        path: wisevision_msgs_ws/src
 
     - name: Install dependencies
       run: |
@@ -37,4 +37,10 @@ jobs:
     - name: Build test
       run: |
             . /opt/ros/humble/setup.sh
+            cd wisevision_msgs_ws
             colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+      
+    - name: Clean up workspace
+      if: always()
+      run: |
+        sudo rm -rf wisevision_msgs_ws
