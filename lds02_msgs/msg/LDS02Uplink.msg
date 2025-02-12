@@ -8,10 +8,9 @@
 #  file, You can obtain one at https://mozilla.org/MPL/2.0/.
 #
 
-# DeleteSubscriber.srv
-
-# Name of the topic that should be deleted
-string topic_name_to_delete
----
-# Connection status (true if the sensor or component is connected, false otherwise)
-bool connection
+float32 battery_level # voltage
+bool open
+uint8 mod
+uint32 total_door_open
+uint32 last_door_open_duration # seconds
+bool alarm_triggered
