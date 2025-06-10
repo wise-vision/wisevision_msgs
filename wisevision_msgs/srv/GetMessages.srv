@@ -1,0 +1,42 @@
+#
+#  Copyright (C) 2025 wisevision
+#
+#  SPDX-License-Identifier: MPL-2.0
+#
+#  This Source Code Form is subject to the terms of the Mozilla Public
+#  License, v. 2.0. If a copy of the MPL was not distributed with this
+#  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#
+
+# GetMessages.srv
+
+# The name of the topic from which messages will be retrieved
+string topic_name
+
+# Name of the influxdb bucket to store data
+string bucket_name
+
+# The start time of the range for retrieving messages
+lora_msgs/FullDateTime time_start
+
+# The end time of the range for retrieving messages
+lora_msgs/FullDateTime time_end
+
+# The maximum number of messages to retrieve; if set to 0, retrieve all messages within the time range
+uint32 number_of_msgs
+
+---
+# Name of the message type for example: "std_msgs/msg/Int32"
+string message_type
+
+# raw data in base64 encode
+string[] messages
+
+# Array of timestamps corresponding to each retrieved message
+lora_msgs/FullDateTime[] timestamps
+
+# Informs about the successful download of the message
+bool success
+
+# Error message
+string error_message

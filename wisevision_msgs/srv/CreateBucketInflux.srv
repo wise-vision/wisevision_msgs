@@ -1,0 +1,28 @@
+#
+#  Copyright (C) 2025 wisevision
+#
+#  SPDX-License-Identifier: MPL-2.0
+#
+#  This Source Code Form is subject to the terms of the Mozilla Public
+#  License, v. 2.0. If a copy of the MPL was not distributed with this
+#  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#
+
+# The name of the bucket to create, e.g. "ros2_data"
+string bucket_name
+
+# Retention time in days for the data stored in this bucket, e.g. 30
+int32 retention_days
+
+# Optional description of the bucket purpose or usage
+string description
+
+---
+
+# === Response ===
+
+# Indicates whether the bucket was successfully created
+bool success
+
+# Error message if the creation failed, empty string on success
+string error_message

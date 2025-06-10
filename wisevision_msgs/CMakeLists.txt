@@ -22,6 +22,13 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/CreateDataBase.srv"
   "srv/DeleteDataFromDataBase.srv"
   "srv/AddStorageToDataBase.srv"
+  "srv/RecordTopics.srv"
+  "srv/StopRecordTopics.srv"
+  "srv/GetRecordedBags.srv"
+  "srv/GetInfluxBuckets.srv"
+  "srv/CreateBucketInflux.srv" 
+  "srv/GetRecordedTopicsWithBucketsName.srv"
+  "srv/GetMessages.srv"
   DEPENDENCIES builtin_interfaces lora_msgs sensor_msgs
 )
 

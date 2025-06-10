@@ -1,0 +1,28 @@
+#
+#  Copyright (C) 2025 wisevision
+#
+#  SPDX-License-Identifier: MPL-2.0
+#
+#  This Source Code Form is subject to the terms of the Mozilla Public
+#  License, v. 2.0. If a copy of the MPL was not distributed with this
+#  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#
+
+# RecordTopics.srv
+
+# Names of topics to record
+string[] topics_names
+
+# Name of the influxdb bucket to store data
+string bucket_name
+
+# Flag to wait topic if it's not enable
+bool wait_for_topic
+
+---
+
+# Indicates whether the device was successfully added (true for success, false for failure)
+bool success
+
+# Error message in case of failure, providing details about what went wrong
+string error

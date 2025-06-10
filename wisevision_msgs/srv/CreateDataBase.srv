@@ -13,8 +13,11 @@
 # The key expression, e.g., "demo/example/**"
 string key_expr
 
-# The storage_name, e.g., "influxdb"
+# The storage_name, "my_data"
 string storage_name
+
+# The storage_name, e.g., "influxdb"
+string storage_id
 
 # The name of the database, e.g., "zenoh_example"
 string db_name   
