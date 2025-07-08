@@ -22,7 +22,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/CreateDataBase.srv"
   "srv/DeleteDataFromDataBase.srv"
   "srv/AddStorageToDataBase.srv"
-  "srv/InfluxRecordTopics.srv"
+  "srv/InfluxStartRecordTopics.srv"
   "srv/InfluxStopRecordTopics.srv"
   "srv/InfluxGetRecordedBagsByTopic.srv"
   "srv/InfluxGetBuckets.srv"

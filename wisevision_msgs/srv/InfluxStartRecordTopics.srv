@@ -8,7 +8,7 @@
 #  file, You can obtain one at https://mozilla.org/MPL/2.0/.
 #
 
-# RecordTopics.srv
+# StartRecordTopics.srv
 
 # Names of topics to record
 string[] topics_names
