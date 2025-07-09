@@ -1,0 +1,37 @@
+#
+#  Copyright (C) 2025 wisevision
+#
+#  SPDX-License-Identifier: MPL-2.0
+#
+#  This Source Code Form is subject to the terms of the Mozilla Public
+#  License, v. 2.0. If a copy of the MPL was not distributed with this
+#  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#
+
+# GetRecordedBagsByTopic.srv
+
+# Request:
+
+# Name of the topic
+string topic_name
+
+---
+# Response:
+
+# Name of requested topic
+string topic_name
+
+# Name of the influxdb bucket
+string[] bucket_names
+
+# Id of the recorded bag, it is a timestamp when record was started
+lora_msgs/FullDateTime[] record_ids
+
+# Recording end time
+lora_msgs/FullDateTime[] end_time_stamps
+
+# Success information
+bool success
+
+# Error message
+string error
