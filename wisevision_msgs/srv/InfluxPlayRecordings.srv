@@ -1,0 +1,28 @@
+#
+#  Copyright (C) 2025 wisevision
+#
+#  SPDX-License-Identifier: MPL-2.0
+#
+#  This Source Code Form is subject to the terms of the Mozilla Public
+#  License, v. 2.0. If a copy of the MPL was not distributed with this
+#  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#
+
+# PlayRecordings.srv
+
+# List of topics to play back
+string[] topic_names
+
+# Corresponding record IDs for the playback session
+string[] record_ids
+
+# Name of the influxdb bucket from which to retrieve data
+string bucket_name
+
+---
+
+# Indicates whether the playback was successful
+bool success
+
+# Error message in case of failure
+string error

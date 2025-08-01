@@ -1,0 +1,29 @@
+#
+#  Copyright (C) 2025 wisevision
+#
+#  SPDX-License-Identifier: MPL-2.0
+#
+#  This Source Code Form is subject to the terms of the Mozilla Public
+#  License, v. 2.0. If a copy of the MPL was not distributed with this
+#  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#
+
+# GetRecordedTopicsWithBucketsName.srv
+
+# Request:
+
+---
+# Response
+
+# List of all recorded ROS topics found in the database
+string[] topics
+
+# List of InfluxDB bucket names corresponding to each topic
+# This array has the same length as 'topics' with matching indices
+string[] bucket_names
+
+# Indicates if the operation was successful
+bool success
+
+# Contains error message if success is false, empty otherwise
+string error_message
