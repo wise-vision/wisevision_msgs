@@ -33,6 +33,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/InfluxGetCurrentlyRecordingTopics.srv"
   "srv/InfluxGetCurrentlyPlayingTopics.srv"
   "srv/InfluxStopPlayingTopics.srv"
+  "srv/InfluxGetPendingRecordingTopics.srv"
   DEPENDENCIES builtin_interfaces lora_msgs sensor_msgs
 )
 
