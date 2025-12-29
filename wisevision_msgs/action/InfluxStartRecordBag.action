@@ -1,0 +1,67 @@
+#
+#  Copyright (C) 2025 wisevision
+#
+#  SPDX-License-Identifier: MPL-2.0
+#
+#  This Source Code Form is subject to the terms of the Mozilla Public
+#  License, v. 2.0. If a copy of the MPL was not distributed with this
+#  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#
+
+# InfluxStartRecordBag.action
+
+# Request
+
+# Names of topics to record
+string[] topics_names
+
+# Name of the influxdb bucket to store data
+string bucket_name
+
+# Number of seconds since the last received message on a topic
+# after which a warning is emitted.
+# If a single value is provided, it is applied to all topics.
+# If multiple values are provided, their order must correspond
+# to the order of topics specified in the request.
+int32[] warn_timeout
+
+
+---
+# Result
+
+# Reason for stopping the recording
+uint8 STOP_REASON_USER=0        # User requested stop
+uint8 STOP_REASON_NO_STORAGE=1  # InfluxDB out of storage
+uint8 STOP_REASON_SYSTEM_ERROR=2 # Internal system error
+
+uint8 stop_reason
+
+# Names of the topics associated with this recording
+string[] topics_names
+
+# Number of messages recorded for each topic.
+# If provided, the order corresponds to topics_names.
+int32[] message_count
+
+# Total size of the recording in bytes
+int32 size
+
+---
+# Feedback
+
+# True if recording is currently active
+bool is_recording
+
+# Topics currently being recorded
+string[] topics_names
+
+# Warning status for each topic (true if warning is active)
+# Order corresponds to topics_names
+bool[] warn_active
+
+# Topics pending subscription (not yet available)
+string[] pending_topics
+
+# Last error message, empty if none
+string last_error
+
