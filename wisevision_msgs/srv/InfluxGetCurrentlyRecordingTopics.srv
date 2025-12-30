@@ -19,3 +19,5 @@ string error_message
 string[] topics           # List of topic names currently being recorded
 string[] bucket_names     # Corresponding bucket names for each topic
 string[] record_ids       # Record IDs for each active recording session
+string[] goal_id          # Action goal identifiers associated with each recording
+bool[] is_resumed         # True if the recording was resumed, false if it was started from action from user

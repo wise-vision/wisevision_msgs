@@ -36,8 +36,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/InfluxGetPendingRecordingTopics.srv"
   "srv/InfluxChangeBucketRetention.srv"
   # Actions
-  "action/InfluxStartRecordBag.action"
-  "action/InfluxResumeRecordBag.action"
+  "action/InfluxRecordBag.action"
   "action/InfluxPlayRecordedBag.action"
   DEPENDENCIES builtin_interfaces lora_msgs sensor_msgs
 )

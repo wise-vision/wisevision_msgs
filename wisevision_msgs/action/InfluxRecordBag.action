@@ -8,12 +8,15 @@
 #  file, You can obtain one at https://mozilla.org/MPL/2.0/.
 #
 
-# InfluxResumeRecordBag.action
+# InfluxRecordBag.action
 
 # Request
 
-# Names of topics to resume record
+# Names of topics to record
 string[] topics_names
+
+# Record ID in influxdb (only to resume recoridng)
+string[] record_id
 
 # Name of the influxdb bucket to store data
 string bucket_name
