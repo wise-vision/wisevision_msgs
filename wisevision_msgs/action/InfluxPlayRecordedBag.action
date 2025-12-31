@@ -39,6 +39,10 @@ bool loop
 # Wait for at least one subscriber on each output topic before publishing
 bool wait_for_subscribers
 
+# Indicates whether playback is allowed while one or more topics
+# from the same recording are still being actively recorded
+bool force_play
+
 ---
 # Result
 

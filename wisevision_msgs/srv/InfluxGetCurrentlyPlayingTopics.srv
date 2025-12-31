@@ -18,3 +18,4 @@ string[] bucket_names     # Corresponding bucket names for each topic
 string[] record_ids       # Corresponding record IDs for each topic
 bool success              # Whether the operation was successful
 string error_message      # Error message if success is false
+string[] goal_id          # Action goal identifiers associated with each play
