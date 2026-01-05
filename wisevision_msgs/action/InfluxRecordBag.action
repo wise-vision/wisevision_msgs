@@ -15,8 +15,8 @@
 # Names of topics to record
 string[] topics_names
 
-# Record ID in influxdb (only to resume recoridng)
-string[] record_id
+# Record ID in influxdb (only to resume recording)
+string record_id
 
 # Name of the influxdb bucket to store data
 string bucket_name
@@ -26,7 +26,7 @@ string bucket_name
 # If a single value is provided, it is applied to all topics.
 # If multiple values are provided, their order must correspond
 # to the order of topics specified in the request.
-int32[] warn_timeout
+int32[] warn_timeouts
 
 
 ---

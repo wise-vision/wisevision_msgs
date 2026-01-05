@@ -15,4 +15,4 @@ string[] topics_names     # List of topic names to stop playing
 ---
 # Response
 bool success              # Whether the operation was successful
-string error             # Error message (empty if successful, contains info about missing topics if partial success)
+string error_message      # Error message (empty if successful, contains info about missing topics if partial success)
