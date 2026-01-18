@@ -1,0 +1,79 @@
+#
+#  Copyright (C) 2025 wisevision
+#
+#  SPDX-License-Identifier: MPL-2.0
+#
+#  This Source Code Form is subject to the terms of the Mozilla Public
+#  License, v. 2.0. If a copy of the MPL was not distributed with this
+#  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#
+
+# InfluxPlayRecordedBag.action
+
+# Request
+
+# InfluxDB bucket name where the recording is stored
+string bucket_name
+
+# Recording identifier (record_id) to play back
+string record_id
+
+# Topics to play back. If empty, play back all topics available in the recording.
+string[] topic_names
+
+# Prefix added to all output topic names (empty = no prefix)
+string prefix
+
+# Playback rate multiplier (1.0 = real-time, 0.0 = as fast as possible)
+float32 rate
+
+# Start offset in seconds from the beginning of the recording (0 = from start)
+float32 start_offset
+
+# Maximum playback duration in seconds (0 = until end)
+float32 duration
+
+# Loop playback (restart from beginning after reaching end)
+bool loop
+
+# Wait for at least one subscriber on each output topic before publishing
+bool wait_for_subscribers
+
+# Indicates whether playback is allowed while one or more topics
+# from the same recording are still being actively recorded
+bool force_play
+
+---
+# Result
+
+# True if playback finished successfully
+bool success
+
+# Error message (empty if success)
+string error_message
+
+# Topics that were actually played back (after filtering/prefixing rules)
+string[] played_topic_names
+
+# Number of messages published during playback (best-effort)
+int64 published_message_count
+
+---
+# Feedback
+
+# True while playback is currently active
+bool is_playing
+
+# Current topic being published (empty if idle)
+string current_topic
+
+# Playback progress in seconds from start of playback (best-effort)
+float32 played_seconds
+
+# Total duration in seconds for this playback session (0 if unknown)
+float32 total_seconds
+
+# Number of messages published so far (best-effort)
+int64 published_message_count
+
+

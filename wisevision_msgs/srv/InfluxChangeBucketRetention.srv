@@ -1,0 +1,39 @@
+#
+#  Copyright (C) 2025 wisevision
+#
+#  SPDX-License-Identifier: MPL-2.0
+#
+#  This Source Code Form is subject to the terms of the Mozilla Public
+#  License, v. 2.0. If a copy of the MPL was not distributed with this
+#  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#
+
+# InfluxChangeBucketRetention.srv
+
+# Request
+string bucket_name
+
+# If true -> bucket without retention (infinite retention).
+# Time fields below are ignored.
+bool infinite
+
+# Retention expressed as total seconds:
+# - if > 0, this value is used directly
+# - if == 0, retention is calculated from days/hours/minutes/seconds
+uint64 retention_seconds
+
+# Human-friendly duration fields
+# Used only when retention_seconds == 0 and infinite == false
+uint32 days
+uint32 hours
+uint32 minutes
+uint32 seconds
+
+---
+# Response
+bool success
+string message
+
+# Final retention value applied to the bucket
+# 0 means infinite retention
+uint64 applied_retention_seconds
