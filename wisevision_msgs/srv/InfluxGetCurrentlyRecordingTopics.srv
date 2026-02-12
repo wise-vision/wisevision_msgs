@@ -1,0 +1,23 @@
+#
+#  Copyright (C) 2025 wisevision
+#
+#  SPDX-License-Identifier: MPL-2.0
+#
+#  This Source Code Form is subject to the terms of the Mozilla Public
+#  License, v. 2.0. If a copy of the MPL was not distributed with this
+#  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#
+
+# InfluxGetCurrentlyRecordingTopics.srv
+
+
+# Request - no parameters needed to get currently recording topics
+---
+# Response
+bool success
+string error_message
+string[] topics           # List of topic names currently being recorded
+string[] bucket_names     # Corresponding bucket names for each topic
+string[] record_ids       # Record IDs for each active recording session
+string[] goal_ids         # Action goal identifiers associated with each recording
+bool[] is_resumed         # True if the recording was resumed, false if it was started from action from user
